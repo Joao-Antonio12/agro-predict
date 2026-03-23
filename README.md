@@ -64,7 +64,7 @@ Dados climáticos (Open-Meteo API)  +  Histórico de safras (CONAB)
 ---
 
 ## Estrutura do projeto
-
+'''
 agro-predict/
 ├── data/
 │   ├── raw/              #dados brutos das APIs
@@ -80,7 +80,7 @@ agro-predict/
 │   └── modelo_agro_predict.pkl
 └── requirements.txt
 
-
+'''
 ---
 
 ## Como rodar
@@ -118,7 +118,7 @@ python src/coleta.py
 
 ## Autor
 
-Desenvolvido por **[Seu Nome]**  
+Desenvolvido por João Antonio Siqueira Pascuini  
 Estudante de Ciência da Computação — UNIFAL-MG 
 Estudante de Engenharia Agronômica — UNIASSELVI  
 
