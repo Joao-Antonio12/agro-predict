@@ -1,0 +1,7 @@
+{
+  "modelo": "Linear RegressionCrossValidation",
+  "r2": 0.796,
+  "mae": 4.78,
+  "n_safras": 24,
+  "n_splits": 5
+}
