@@ -12,14 +12,15 @@
 
 O modelo prevê a produtividade do milho (1ª safra · MG) com:
 
-| Métrica | Valor |
-|---------|-------|
-| R² | 0.716 |
-| Erro médio (MAE) | 5.18 sc/ha |
-| Margem de incerteza | ±4.3 sc/ha |
+| Métrica | Modelo | R² | MAE | Validação|
+|---------|--------|----|-----|----------|
+| v1.0 | Regressão Linear | 0.716 | 5.18 sc/ha | Treino/teste simples|
+| v1.2 | Regresão Linear + CV | 0.796 | 4.78 sc/ha | Cross-Validation de 5 rodadas |
 
 ![Gráfico de previsão](outputs/agropredict_final.png)
-
+> Os teste com Random Forest não se seíram bem, afinal temos apenas 24 safras para treinos no momento
+> O mesmo apresentou R² superior (0.713 vc 0.649), ou seja, um modelo mais confiável que o anterior
+> O Random Forest será futuramente reavaliado (v2.0), versão que contará com dataset expandido
 ---
 
 ## Contexto
@@ -120,7 +121,7 @@ python src/coleta.py
 
 Desenvolvido por João Antonio Siqueira Pascuini  
 Estudante de Ciência da Computação — UNIFAL-MG 
-Estudante de Engenharia Agronômica — UNIASSELVI  
+Estudante de Agronomia — UNIASSELVI  
 
 [![GitHub](https://img.shields.io/badge/GitHub-perfil-black)](https://github.com/Joao-Antonio12)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-perfil-blue)](https://www.linkedin.com/in/jo%C3%A3o-antonio-siqueira-pascuini-aa19a62b7/)
