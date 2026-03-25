@@ -1,0 +1,7 @@
+{
+  "modelo": "RandomForest v2.0",
+  "r2": 0.884,
+  "n_linhas": 3.73,
+  "n_municipios": 480,
+  "n_splits": 5
+}
