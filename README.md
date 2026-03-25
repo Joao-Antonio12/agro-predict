@@ -18,7 +18,7 @@ O modelo prevê a produtividade do milho (1ª safra · MG) com:
 | v1.2 | Regresão Linear + CV | 0.796 | 4.78 sc/ha | Cross-Validation de 5 rodadas |
 
 ![Gráfico de previsão](outputs/agropredict_final.png)
-> Os teste com Random Forest não se seíram bem, afinal temos apenas 24 safras para treinos no momento
+> Os teste com Random Forest não se saíram bem, afinal temos apenas 24 safras para treinos no momento
 > O mesmo apresentou R² superior (0.713 vc 0.649), ou seja, um modelo mais confiável que o anterior
 > O Random Forest será futuramente reavaliado (v2.0), versão que contará com dataset expandido
 ---
