@@ -8,20 +8,44 @@
 
 ---
 
-## Resultado
+Resultados
+| Versão | Modelo | Dados | R² | MAE | Validação |
+|--------|--------|-------|----|-----|-----------|
+| v1.0 | Regressão Linear | 24 linhas · 1 município | 0.716 | 5.18 sc/ha | Treino/teste simples |
+| v1.2 | Regressão Linear + CV | 24 linhas · 1 município | 0.796 | 4.78 sc/ha | Cross-validation 5 rodadas |
+| v2.0 | Random Forest + CV | 480 linhas · 20 municípios | 0.884 | 3.70 sc/ha | Cross-validation 5 rodadas |
 
-O modelo prevê a produtividade do milho (1ª safra · MG) com:
+![Gráfico v2.0](outputs/agropredict_v3.png)
 
-| Métrica | Modelo | R² | MAE | Validação|
-|---------|--------|----|-----|----------|
-| v1.0 | Regressão Linear | 0.716 | 5.18 sc/ha | Treino/teste simples|
-| v1.2 | Regresão Linear + CV | 0.796 | 4.78 sc/ha | Cross-Validation de 5 rodadas |
-
-![Gráfico de previsão](outputs/agropredict_final.png)
-> Os teste com Random Forest não se saíram bem, afinal temos apenas 24 safras para treinos no momento
-> O mesmo apresentou R² superior (0.713 vc 0.649), ou seja, um modelo mais confiável que o anterior
-> O Random Forest será futuramente reavaliado (v2.0), versão que contará com dataset expandido
 ---
+
+Desempenho por região
+| Região | Municípios | R² | MAE |
+|--------|------------|----|-----|
+| Alto Paranaíba | 4 | 0.885 | 3.7 sc/ha |
+| Central | 3 | 0.882 | 3.8 sc/ha |
+| Noroeste | 3 | 0.884 | 3.7 sc/ha |
+| Sul de Minas | 4 | 0.881 | 3.8 sc/ha |
+| Triângulo Mineiro | 4 | — | — |
+| Zona da Mata | 2 | — | — |
+
+---
+
+Limitações conhecidas
+
+Produtividade estadual: os dados de produtividade são a média de MG inteiro (CONAB), não por município. Isso faz o modelo capturar bem a tendência de longo prazo mas suavizar variações anuais locais
+Sem dados de solo: pH, matéria orgânica e textura do solo influenciam muito a produtividade mas não estão no modelo
+Tendência tecnológica linear: o modelo assume que o avanço tecnológico cresce linearmente — na realidade pode ter saltos em anos de adoção de nova tecnologia
+
+---
+
+Roadmap
+[x] v1.0 — modelo base com Regressão Linear
+[x] v1.2 — Cross-validation e comparação de algoritmos
+[x] v2.0 — expansão para 20 municípios e Random Forest
+[ ] v3.0 — produtividade por município + mais culturas (soja, café)
+[ ] v4.0 — dashboard interativo com Streamlit
+[ ] v5.0 — API REST para integração com ERPs agrícolas
 
 ## Contexto
 
