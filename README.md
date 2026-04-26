@@ -43,7 +43,7 @@ Roadmap
 [x] v1.0 — modelo base com Regressão Linear
 [x] v1.2 — Cross-validation e comparação de algoritmos
 [x] v2.0 — expansão para 20 municípios e Random Forest
-[ ] v3.0 — produtividade por município + mais culturas (soja, café)
+[x] v3.0 — produtividade por município + mais culturas (soja, café)
 [ ] v4.0 — dashboard interativo com Streamlit
 [ ] v5.0 — API REST para integração com ERPs agrícolas
 
